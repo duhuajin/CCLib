@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CCLib'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CCLib.'
+  s.summary          = '杜华金的个人私有库'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Du/CCLib'
+  s.homepage         = 'https://github.com/duhuajin/CCLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Du' => '552923375@qq.com' }
-  s.source           = { :git => 'https://github.com/Du/CCLib.git', :tag => s.version.to_s }
+  s.author           = { 'duhuajin' => '552923375@qq.com' }
+  s.source           = { :git => 'https://github.com/duhuajin/CCLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

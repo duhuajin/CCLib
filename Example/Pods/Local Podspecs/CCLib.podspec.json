@@ -1,0 +1,22 @@
+{
+  "name": "CCLib",
+  "version": "0.1.0",
+  "summary": "杜华金的个人私有库",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/duhuajin/CCLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "duhuajin": "552923375@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/duhuajin/CCLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CCLib/Classes/**/*"
+}
