@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CCDatePicker.h"
 #import "CALayer+Ext.h"
 #import "NSDate+Ext.h"
 #import "NSObject+JSContextTracker.h"

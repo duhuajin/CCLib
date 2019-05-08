@@ -1,19 +1,29 @@
 PODS:
-  - CCLib (0.1.4):
-    - CCLib/CCExts (= 0.1.4)
-    - CCLib/CCJson (= 0.1.4)
-  - CCLib/CCExts (0.1.4)
-  - CCLib/CCJson (0.1.4)
+  - CCLib (0.1.5):
+    - CCLib/CCDatePicker (= 0.1.5)
+    - CCLib/CCExts (= 0.1.5)
+    - CCLib/CCJson (= 0.1.5)
+  - CCLib/CCDatePicker (0.1.5):
+    - CCLib/CCExts
+    - Masonry
+  - CCLib/CCExts (0.1.5)
+  - CCLib/CCJson (0.1.5)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - CCLib (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
 
 EXTERNAL SOURCES:
   CCLib:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CCLib: e674b21f3d85cd19df999348dd89ed34a2777245
+  CCLib: 6750adda63946a8303e9bfe9e81ae78f163221fb
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 00f0ba56194b33e7db95461f3871e7cb15e2944f
 
