@@ -10,6 +10,7 @@
 #import "UIColor+Hex.h"
 #import <Masonry/Masonry.h>
 
+#define CCWeak(type)  __weak typeof(type) ws = type;
 
 #define kSheetHei 240
 #define kLicsenseHei 180
