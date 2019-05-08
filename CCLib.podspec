@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CCLib'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '杜华金的个人私有库'
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,16 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   #  s.source_files = 'CCLib/Classes/**/*'
-  s.source_files = 'CCLib/Classes/CCExts/*','CCLib/Classes/CCJson/*'
 
+  s.subspec 'CCExts' do |ccexts|
+  ccexts.source_files = 'CCLib/Classes/CCExts/*'
+
+  end
   
+  s.subspec 'CCJson' do |ccjson|
+  ccjson.source_files = 'CCLib/Classes/CCJson/*'
+  
+  end
   # s.resource_bundles = {
   #   'CCLib' => ['CCLib/Assets/*.png']
   # }
