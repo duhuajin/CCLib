@@ -1,5 +1,5 @@
 PODS:
-  - CCLib (0.1.1)
+  - CCLib (0.1.2)
 
 DEPENDENCIES:
   - CCLib (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CCLib: ee4d990b8a95c5da87c4e6ff4bc24294d52382d7
+  CCLib: 3e59bd9df2c038ba5745b173360ac80c502fb9a1
 
 PODFILE CHECKSUM: 00f0ba56194b33e7db95461f3871e7cb15e2944f
 

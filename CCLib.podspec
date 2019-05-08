@@ -30,7 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CCLib/Classes/**/*'
+  #  s.source_files = 'CCLib/Classes/**/*'
+  s.source_files = 'CCLib/Classes/CCExts/*','CCLib/Classes/CCJson/*'
+
   
   # s.resource_bundles = {
   #   'CCLib' => ['CCLib/Assets/*.png']
