@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CCLib'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = '杜华金的个人私有库'
 
 # This description is used to generate tags and improve search results.
@@ -45,9 +45,11 @@ TODO: Add long description of the pod here.
   
   s.subspec 'CCBase' do |ccbase|
       ccbase.source_files = 'CCLib/Classes/CCBase/*'
+      
       ccbase.dependency 'Masonry'
       ccbase.dependency 'CCLib/CCExts'
       ccbase.dependency 'CCLib/CCCollection'
+      ccbase.dependency 'CCLib/CCJson'
       ccbase.dependency 'JSONModel'
 
   end
