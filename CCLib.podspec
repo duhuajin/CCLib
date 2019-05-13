@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CCLib'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = '杜华金的个人私有库'
 
 # This description is used to generate tags and improve search results.
@@ -42,6 +42,25 @@ TODO: Add long description of the pod here.
   
   end
   
+  s.subspec 'CCForm' do |ccform|
+      ccform.source_files = 'CCLib/Classes/CCForm/*'
+      ccform.dependency 'Masonry'
+      ccform.dependency 'CCLib/CCExts'
+  end
+  
+  s.subspec 'CCBase' do |ccform|
+      ccform.source_files = 'CCLib/Classes/CCBase/*'
+      ccform.dependency 'Masonry'
+      ccform.dependency 'CCLib/CCExts'
+      ccform.dependency 'CCLib/CCCollection'
+      ccform.dependency 'JSONModel'
+
+  end
+  
+  
+  s.subspec 'CCCollection' do |ccform|
+      ccform.source_files = 'CCLib/Classes/CCCollection/*'
+  end
   s.subspec 'CCDatePicker' do |ccdatepicker|
       ccdatepicker.source_files = 'CCLib/Classes/CCDatePicker/*'
       ccdatepicker.dependency 'Masonry'
