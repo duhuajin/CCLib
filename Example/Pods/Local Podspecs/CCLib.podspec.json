@@ -28,18 +28,6 @@
       "source_files": "CCLib/Classes/CCJson/*"
     },
     {
-      "name": "CCForm",
-      "source_files": "CCLib/Classes/CCForm/*",
-      "dependencies": {
-        "Masonry": [
-
-        ],
-        "CCLib/CCExts": [
-
-        ]
-      }
-    },
-    {
       "name": "CCBase",
       "source_files": "CCLib/Classes/CCBase/*",
       "dependencies": {

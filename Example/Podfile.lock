@@ -4,7 +4,6 @@ PODS:
     - CCLib/CCCollection (= 0.1.7)
     - CCLib/CCDatePicker (= 0.1.7)
     - CCLib/CCExts (= 0.1.7)
-    - CCLib/CCForm (= 0.1.7)
     - CCLib/CCJson (= 0.1.7)
   - CCLib/CCBase (0.1.7):
     - CCLib/CCCollection
@@ -16,9 +15,6 @@ PODS:
     - CCLib/CCExts
     - Masonry
   - CCLib/CCExts (0.1.7)
-  - CCLib/CCForm (0.1.7):
-    - CCLib/CCExts
-    - Masonry
   - CCLib/CCJson (0.1.7)
   - JSONModel (1.8.0)
   - Masonry (1.1.0)
@@ -36,7 +32,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CCLib: ade19de75662036424099572bacf4cdf39723684
+  CCLib: 1f3d3e2d7ab00d0c19d50c7e5594366efdf52c4c
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
