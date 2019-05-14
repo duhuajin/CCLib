@@ -34,12 +34,12 @@ Pod::Spec.new do |s|
     
     s.subspec 'CCExts' do |ccexts|
         ccexts.source_files = 'CCLib/Classes/CCExts/*'
-        ccbase.dependency 'CCLib/CCBase'
     end
     
     s.subspec 'CCJson' do |ccjson|
         ccjson.source_files = 'CCLib/Classes/CCJson/*'
     end
+    
     s.subspec 'CCBase' do |ccbase|
         ccbase.source_files = 'CCLib/Classes/CCBase/*'
         ccbase.dependency 'Masonry'

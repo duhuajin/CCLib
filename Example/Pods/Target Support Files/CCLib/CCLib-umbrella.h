@@ -16,6 +16,7 @@
 #import "CCBaseTableViewController.h"
 #import "CCBaseViewController.h"
 #import "CCLoadingDot.h"
+#import "UIView+Ext.h"
 #import "JHCollectionReusableView.h"
 #import "JHCollectionViewFlowLayout.h"
 #import "JHCollectionViewLayoutAttributes.h"
@@ -31,7 +32,6 @@
 #import "UINavigationBar+Ext.h"
 #import "UITableView+Ext.h"
 #import "UITextView+Placeholder.h"
-#import "UIView+Ext.h"
 #import "UIViewController+Catygory.h"
 #import "CCJson.h"
 
