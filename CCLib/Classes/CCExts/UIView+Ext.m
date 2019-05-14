@@ -31,13 +31,6 @@
     self.layer.shadowPath=[UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:5].CGPath;
     
     self.layer.cornerRadius = 5;
-//
-//    self.layer.shadowColor = [UIColor colorWithRed:6/255.0 green:90/255.0 blue:189/255.0 alpha:0.2].CGColor;
-//    self.layer.shadowOffset = CGSizeMake(0,2);
-//    self.layer.shadowOpacity = 1;
-//    self.layer.shadowRadius = 8;
-//    self.layer.shadowPath=[UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:5].CGPath;
-//
     self.clipsToBounds=NO;
 }
 
@@ -47,15 +40,9 @@
     self.layer.shadowOpacity = 1;
     self.layer.shadowRadius = 3;
     self.layer.shadowPath=[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, self.frame.size.height/2,self.frame.size.width, self.frame.size.height/2) cornerRadius:5].CGPath;
-    
     self.layer.cornerRadius = 0;
-
-    //
     self.clipsToBounds=NO;
 }
-
-
-
 
 - (UILabel *)placeholderLabel {
     UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
