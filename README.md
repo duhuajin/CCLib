@@ -19,6 +19,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'CCLib'
 ```
+## cocoapods国内镜像
+
+https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git
 
 ## Author
 
@@ -28,6 +31,3 @@ Du, 552923375@qq.com
 
 CCLib is available under the MIT license. See the LICENSE file for more info.
 
-##cocoapods国内镜像
-
-https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git

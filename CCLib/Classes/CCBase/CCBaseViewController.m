@@ -42,7 +42,7 @@
             backImage=self.backImage;
         }
         if(self.navigationController.viewControllers[0]!=self&&backImage){
-            UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:backImage] style:UIBarButtonItemStylePlain target:self action:@selector(pop)];
+            UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithImage:backImage style:UIBarButtonItemStylePlain target:self action:@selector(pop)];
             self.navigationItem.leftBarButtonItem=item;
         }
     }
