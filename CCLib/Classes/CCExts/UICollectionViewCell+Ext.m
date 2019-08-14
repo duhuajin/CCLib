@@ -8,14 +8,24 @@
 
 #import "UICollectionViewCell+Ext.h"
 
+static id cell;
+static id identifier;
 
 @implementation UICollectionViewCell (Ext)
-
 
 +(instancetype)create:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath identifier:(NSString*)identifier{
     
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
 
+    return cell;
+}
+
+
++(instancetype )loadNib{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cell=[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil][0];
+    });
     return cell;
 }
 

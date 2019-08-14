@@ -1,6 +1,6 @@
 {
   "name": "CCLib",
-  "version": "0.1.10",
+  "version": "0.1.15",
   "summary": "杜华金的个人私有库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/duhuajin/CCLib",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/duhuajin/CCLib.git",
-    "tag": "0.1.10"
+    "tag": "0.1.15"
   },
   "platforms": {
     "ios": "8.0"
@@ -31,9 +31,6 @@
       "name": "CCBase",
       "source_files": "CCLib/Classes/CCBase/*",
       "dependencies": {
-        "Masonry": [
-
-        ],
         "CCLib/CCExts": [
 
         ],
@@ -44,6 +41,12 @@
 
         ],
         "JSONModel": [
+
+        ],
+        "Masonry": [
+
+        ],
+        "MJRefresh": [
 
         ]
       }

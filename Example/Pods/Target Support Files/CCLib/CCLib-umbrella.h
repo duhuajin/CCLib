@@ -27,6 +27,7 @@
 #import "NSString+Ext.h"
 #import "NSURL+Ext.h"
 #import "UIButton+Ext.h"
+#import "UICollectionViewCell+Ext.h"
 #import "UIColor+Hex.h"
 #import "UILabel+Ext.h"
 #import "UINavigationBar+Ext.h"

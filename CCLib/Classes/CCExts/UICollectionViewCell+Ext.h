@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(instancetype)create:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath identifier:(NSString*)identifier;
 
++(instancetype )loadNib;
+
 +(NSString*)identifier;
 
 @end

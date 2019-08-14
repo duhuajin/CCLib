@@ -9,13 +9,26 @@
 #import "CCBaseTableViewController.h"
 #import "CCBaseHeader.h"
 #import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+
 @interface CCBaseTableViewController ()
 
+@property (nonatomic)BOOL hasMore;
+@property (nonatomic)BOOL isReload;
 
 @end
 
 @implementation CCBaseTableViewController
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self.tableView addSubview:self.refreshControl];
+        self.pageSize=15;
+        self.pageIndex=0;
+    }
+    return self;
+}
 -(UITableView *)tableView{
     if(!_tableView){
         _tableView=[[UITableView alloc]init];
@@ -33,6 +46,8 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.top.bottom.equalTo(ws.view);
     }];
+    [self showLoadingView];
+    [self loadData];
     // Do any additional setup after loading the view.
 }
 
@@ -44,18 +59,83 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return self.datas.count;
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)showLoadingView{
+    [super showLoadingView];
+    [self.tableView setHidden:YES];
 }
-*/
 
+-(void)hideLoadingView{
+    [self performSelector:@selector(hideLoad) withObject:nil afterDelay:0.5f];
+}
+-(void)hideLoad{
+    [super hideLoadingView];
+    [self.tableView setHidden:NO];
+    
+}
+
+-(void)refreshData{
+    [self initData];
+    [self loadData];
+}
+
+-(void)initRefresh{
+    CCWeak(self);
+    [self.refreshControl setEnabled:self.refreshHeaderEnable];
+    if(!self.refreshFooterEnable){
+        self.tableView.mj_footer=nil;
+        return;
+    }
+    if(!self.hasMore){
+        self.tableView.mj_footer=nil;
+        return;
+    }
+    if(self.tableView.mj_footer){
+        return;
+    }
+    self.tableView.mj_footer=[MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [ws loadData];
+    }];
+    
+}
+-(void)endRefresh{
+    [self hideLoadingView];
+    if(self.refreshHeaderEnable){
+        [self.refreshControl endRefreshing];
+    }
+    if(self.refreshFooterEnable){
+        [self.tableView.mj_footer endRefreshing];
+    }
+}
+
+-(void)addData:(NSArray *)datas{
+    if(self.isReload){
+        [self.datas removeAllObjects];
+        self.isReload=NO;
+    }
+    [self.datas addObjectsFromArray:datas];
+    
+    if(datas.count<self.pageSize){
+        self.hasMore=NO;
+    }else{
+        self.hasMore=YES;
+    }
+    self.pageIndex+=1;
+    [self initRefresh];
+    [self.tableView reloadData];
+}
+
+-(void)initData{
+    self.isReload=YES;
+    self.hasMore=NO;
+    self.pageIndex=0;
+    self.pageSize=15;
+}
+
+-(void)loadData{
+    NSAssert(YES, @"需要重写loadData");
+}
 @end

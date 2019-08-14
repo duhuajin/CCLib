@@ -1,24 +1,26 @@
 PODS:
-  - CCLib (0.1.10):
-    - CCLib/CCBase (= 0.1.10)
-    - CCLib/CCCollection (= 0.1.10)
-    - CCLib/CCDatePicker (= 0.1.10)
-    - CCLib/CCExts (= 0.1.10)
-    - CCLib/CCJson (= 0.1.10)
-  - CCLib/CCBase (0.1.10):
+  - CCLib (0.1.15):
+    - CCLib/CCBase (= 0.1.15)
+    - CCLib/CCCollection (= 0.1.15)
+    - CCLib/CCDatePicker (= 0.1.15)
+    - CCLib/CCExts (= 0.1.15)
+    - CCLib/CCJson (= 0.1.15)
+  - CCLib/CCBase (0.1.15):
     - CCLib/CCCollection
     - CCLib/CCExts
     - CCLib/CCJson
     - JSONModel
     - Masonry
-  - CCLib/CCCollection (0.1.10)
-  - CCLib/CCDatePicker (0.1.10):
+    - MJRefresh
+  - CCLib/CCCollection (0.1.15)
+  - CCLib/CCDatePicker (0.1.15):
     - CCLib/CCExts
     - Masonry
-  - CCLib/CCExts (0.1.10)
-  - CCLib/CCJson (0.1.10)
+  - CCLib/CCExts (0.1.15)
+  - CCLib/CCJson (0.1.15)
   - JSONModel (1.8.0)
   - Masonry (1.1.0)
+  - MJRefresh (3.2.0)
 
 DEPENDENCIES:
   - CCLib (from `../`)
@@ -27,15 +29,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - JSONModel
     - Masonry
+    - MJRefresh
 
 EXTERNAL SOURCES:
   CCLib:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CCLib: 032333c049e991abcee3d1e3723076aca7fc98b1
+  CCLib: 6f730b7e43ee46124ca2a0b4442482c73806b1aa
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
 
 PODFILE CHECKSUM: 00f0ba56194b33e7db95461f3871e7cb15e2944f
 
