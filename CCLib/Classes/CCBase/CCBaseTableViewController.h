@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)addData:(NSArray *)datas;
 
+-(void)initRefresh;
+-(void)endRefresh;
+
 @end
 
 NS_ASSUME_NONNULL_END

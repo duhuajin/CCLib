@@ -46,7 +46,6 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.top.bottom.equalTo(ws.view);
     }];
-    [self showLoadingView];
     [self loadData];
     // Do any additional setup after loading the view.
 }
@@ -124,6 +123,7 @@
         self.hasMore=YES;
     }
     self.pageIndex+=1;
+    [self endRefresh];
     [self initRefresh];
     [self.tableView reloadData];
 }
