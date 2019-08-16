@@ -24,7 +24,6 @@
 {
     self = [super init];
     if (self) {
-        [self.collectionView addSubview:self.refreshControl];
         self.pageSize=15;
         self.pageIndex=0;
     }
@@ -50,7 +49,6 @@
 -(UIRefreshControl *)refreshControl{
     if(!_refreshControl){
         _refreshControl=[[UIRefreshControl alloc]init];
-        _refreshControl.enabled=NO;
         [_refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
     }
     return _refreshControl;
@@ -69,6 +67,9 @@
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.top.bottom.equalTo(ws.view);
     }];
+    if(self.refreshHeaderEnable){
+        [self.collectionView addSubview:self.refreshControl];
+    }
     [self loadData];
     // Do any additional setup after loading the view.
 }

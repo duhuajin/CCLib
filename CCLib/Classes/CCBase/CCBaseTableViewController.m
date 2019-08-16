@@ -38,6 +38,13 @@
     }
     return _tableView;
 }
+-(UIRefreshControl *)refreshControl{
+    if(!_refreshControl){
+        _refreshControl=[[UIRefreshControl alloc]init];
+        [_refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _refreshControl;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +53,9 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.top.bottom.equalTo(ws.view);
     }];
+    if(self.refreshHeaderEnable){
+        [self.tableView addSubview:self.refreshControl];
+    }
     [self loadData];
     // Do any additional setup after loading the view.
 }
