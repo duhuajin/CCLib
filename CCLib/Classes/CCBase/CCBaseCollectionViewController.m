@@ -49,7 +49,7 @@
 -(UIRefreshControl *)refreshControl{
     if(!_refreshControl){
         _refreshControl=[[UIRefreshControl alloc]init];
-        [_refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
+        [_refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
     }
     return _refreshControl;
 }
