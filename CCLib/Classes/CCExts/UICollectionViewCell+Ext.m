@@ -28,6 +28,10 @@ static id identifier;
     });
     return cell;
 }
++(instancetype )loadNibNormal{
+   id cell=[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil][0];
+    return cell;
+}
 
 +(NSString*)identifier{
     
