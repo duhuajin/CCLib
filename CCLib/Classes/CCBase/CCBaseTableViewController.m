@@ -23,7 +23,6 @@
 {
     self = [super init];
     if (self) {
-        [self.tableView addSubview:self.refreshControl];
         self.pageSize=15;
         self.pageIndex=0;
     }
